@@ -1,0 +1,48 @@
+import java.util.Scanner;
+import javax.swing.*;
+import cs101.sosgame.*;
+import java.awt.*;
+/**
+ * runs a sos game 
+ * @author Hassan raza
+ * @version 31/3/2018
+ */ 
+public class lab5
+{
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+
+      // constants
+      /**JFrame fam = new JFrame();
+      fam.setLayout(new GridLayout(3,2));
+      fam.add(new JLabel("grid size"));
+      JTextField field = new JTextField();
+      JTextField field2 = new JTextField();
+      JTextField field3 = new JTextField();
+      fam.add(field);
+      fam.add(new JLabel("pl 1"));
+      fam.add(field2);
+      fam.add(new JLabel("pl 2"));
+      fam.add(field3);
+      fam.setSize(600, 600);
+      fam.setVisible(true);*/
+         
+
+      // variables
+      JFrame frame = new JFrame();
+      //SOS game =new SOS(Integer.parseInt(field.getText()));
+      SOS game =new SOS(5);
+      SOSCanvas canvas = new SOSCanvas(game);
+      SOSGUIPanel pan = new SOSGUIPanel(game, "has","raz");
+
+      // program code
+      game.printBoard();
+      frame.setSize(600, 600);
+      //frame.add(canvas);
+      frame.add(pan);
+      frame.setVisible(true);
+      
+   }
+
+}
